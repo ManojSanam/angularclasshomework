@@ -1,0 +1,212 @@
+1) what is RESTful web services?
+Ref 1:
+
+RESTful web services are built to work best on the Web. Representational State Transfer (REST) is an architectural style that specifies constraints, such as the uniform interface, that if applied to a web service induce desirable properties, such as performance, scalability, and modifiability, that enable services to work best on the Web. In the REST architectural style, data and functionality are considered resources and are accessed using Uniform Resource Identifiers (URIs), typically links on the Web. The resources are acted upon by using a set of simple, well-defined operations. The REST architectural style constrains an architecture to a client/server architecture and is designed to use a stateless communication protocol, typically HTTP. In the REST architecture style, clients and servers exchange representations of resources by using a standardized interface and protocol.
+
+Ref 2:
+EST stands for Representational State Transfer, which is an architectural style for networked hypermedia applications, it is primarily used to build Web services that are lightweight, maintainable, and scalable. A service based on REST is called a RESTful service. REST is not dependent on any protocol, but almost every RESTful service uses HTTP as its underlying protocol. In this article, I examine the creation of RESTful services with HTTP.
+
+Features of a RESTful Services
+Every system uses resources. These resources can be pictures, video files, Web pages, business information, or anything that can be represented in a computer-based system. The purpose of a service is to provide a window to its clients so that they can access these resources. Service architects and developers want this service to be easy to implement, maintainable, extensible, and scalable. A RESTful design promises that and more. In general, RESTful services should have following properties and features, which I'll describe in detail:
+
+Representations
+Messages
+URIs
+Uniform interface
+Stateless
+Links between resources
+Caching
+
+Ref 3:
+REST is a client-server architecture which (among other things) leverages the full capacity of the HTTP protocol.
+
+Some relevant points in REST:
+
+Each URL on the server represents a resource; either a collection resource or an element resource.
+A collection resource would be available at a URL like http://restful.ex/items/ which would be a representation of a list of items.
+A element resource would be available at a URL like http://restful.ex/items/2 which would be a representation of a single item, identified by 2.
+Different HTTP methods are used for different CRUD operations:
+a GET is a read operation
+a PUT is a write/modify operation
+a POST is a create/new operation
+a DELETE is a... ok, that one is kind of self-explanatory.
+State (or rather, client context) is not stored on the server-side; all state is in the representations passed back and forth by the client's requests and the server's responses.
+
+Ref 4:
+
+FROM THE ESSENTIAL GUIDE:
+
+Guide: When and how to use REST
+
+GUIDE SECTIONS
+REST vs. SOAP
+REST and APIs
+More on REST
+In this Article
+Web services overview
+REST vs. SOAP
+REST or SOAP: Which is best for me?
+Common problems faced when invoking Web services and solutions
+Next Steps
+Essential Guide
+Section you're in:
+When to use REST instead of SOAP
+More articles from this section:
+When, why SOA and RESTful interfaces should be combined
+Benefits of using REST in mobile applications
+"I need to update the local inventory database with the inventory information from multiple suppliers. The suppliers...
+
+Sign in for existing members
+Continue Reading This Article
+Enjoy this article as well as all of our content, including E-Guides, news, tips and more.
+
+
+corporate email address
+Continue Reading
+By submitting your personal information, you agree that TechTarget and its partners may contact you regarding relevant content, products and special offers.
+You also agree that your personal information may be transferred and processed in the United States, and that you have read and agree to the Terms of Use and the Privacy Policy.
+provide a web service-based interface. As the application does not have any server side component (the application is a fat client talking directly to the database), is it possible to consume these web services directly from my application database?"
+
+Do similar questions trouble you? Ever wondered what could be the solution to such an issue?
+
+For a different perspective, the databases can act as the service consumer in contrast to the norm of acting as a service provider. Here is how you can invoke a web service via database-stored procedures -- and in explaining so, I'll address the differences of REST vs. SOAP.
+
+Web services overview
+
+A Web service, in very broad terms, is a method of communication between two applications or electronic devices over the World Wide Web (WWW). Web services are of two kinds: Simple Object Access Protocol (SOAP) and Representational State Transfer (REST).
+
+SOAP defines a standard communication protocol (set of rules) specification for XML-based message exchange. SOAP uses different transport protocols, such as HTTP and SMTP. The standard protocol HTTP makes it easier for SOAP model to tunnel across firewalls and proxies without any modifications to the SOAP protocol. SOAP can sometimes be slower than middleware technologies like CORBA or ICE due to its verbose XML format.
+
+REST describes a set of architectural principles by which data can be transmitted over a standardized interface (such as HTTP). REST does not contain an additional messaging layer and focuses on design rules for creating stateless services. A client can access the resource using the unique URI and a representation of the resource is returned. With each new resource representation, the client is said to transfer state. While accessing RESTful resources with HTTP protocol, the URL of the resource serves as the resource identifier and GET, PUT, DELETE, POST and HEAD are the standard HTTP operations to be performed on that resource.
+
+
+Ref 5:
+
+Advantages of RESTful Web Services
+
+Fast: RESTful Web Services are fast because there is no strict specification like SOAP. It consumes less bandwidth and resource.
+
+Language and Platform independent: RESTful web services can be written in any programming language and executed in any platform.
+
+Can use SOAP: RESTful web services can use SOAP web services as the implementation.
+
+Permits different data format: RESTful web service permits different data format such as Plain Text, HTML, XML and JSON.
+
+2) what is http?
+
+Ref 1:
+HTTP is called a stateless protocol because each command is executed independently, without any knowledge of the commands that came before it. This is the main reason that it is difficult to implement Web sites that react intelligently to user input. This shortcoming of HTTP is being addressed in a number of new technologies, including ActiveX, Java, JavaScript and cookies.
+
+Ref 2:
+
+Hypertext is structured text that uses logical links (hyperlinks) between nodes containing text. HTTP is the protocol to exchange or transfer hypertext.
+
+Ref 3:
+
+HTTP (Hypertext Transfer Protocol) is the set of rules for transferring files (text, graphic images, sound, video, and other multimedia files) on the World Wide Web. As soon as a Web user opens their Web browser, the user is indirectly making use of HTTP. HTTP is an application protocol that runs on top of the TCP/IP suite of protocols (the foundation protocols for the Internet).
+
+Ref 4:
+Hypertext Transfer Protocol (HTTP) is an application-layer protocol for transmitting hypermedia documents, such as HTML. It was designed for communication between web browsers and web servers, but it can also be used for other purposes. HTTP follows a classical client-server model, with a client opening a connection to make a request, then waiting until it receives a response. HTTP is a stateless protocol, meaning that the server does not keep any data (state) between two requests. Though often based on a TCP/IP layer, it can be used on any reliable transport layer; that is, a protocol that doesn't lose messages silently, such as UDP.
+
+Ref 5:
+HTTP is an application layer protocol and relies on an underlying network-level protocol such as Transmission Control Protocol (TCP) to function.
+
+HTTP resources such as web servers are identified across the Internet using unique identifiers known as Uniform Resource Locators (URLs).
+
+3) what are http methods? why do we use them in rest
+Ref 1:
+ The primary or most-commonly-used HTTP verbs (or methods, as they are properly called) are POST, GET, PUT, PATCH, and DELETE. These correspond to create, read, update, and delete (or CRUD) operations, respectively. There are a number of other verbs, too, but are utilized less frequently. Of those less-frequent methods, OPTIONS and HEAD are used more often than others.
+
+Ref 2:
+
+GET
+The GET method requests a representation of the specified resource. Requests using GET should only retrieve data.
+HEAD
+The HEAD method asks for a response identical to that of a GET request, but without the response body.
+POST
+The POST method is used to submit an entity to the specified resource, often causing a change in state or side effects on the server
+PUT
+The PUT method replaces all current representations of the target resource with the request payload.
+
+DELETE
+The DELETE method deletes the specified resource.
+CONNECT
+The CONNECT method establishes a tunnel to the server identified by the target resource.
+
+OPTIONS
+The OPTIONS method is used to describe the communication options for the target resource.
+TRACE
+The TRACE method performs a message loop-back test along the path to the target resource.
+
+PATCH
+The PATCH method is used to apply partial modifications to a resource.
+
+Ref 3:
+Ref 4:
+Ref 5:
+4) what are http status codes?
+Ref 1:
+1	1xx: Informational
+It means the request has been received and the process is continuing.
+
+2	2xx: Success
+It means the action was successfully received, understood, and accepted.
+
+3	3xx: Redirection
+It means further action must be taken in order to complete the request.
+
+4	4xx: Client Error
+It means the request contains incorrect syntax or cannot be fulfilled.
+
+5	5xx: Server Error
+It means the server failed to fulfill an apparently valid request.
+
+Ref 2:
+Ref 3:
+Ref 4:
+Ref 5:
+5) what is the use of $http in angular js?
+
+Ref 1:
+The AngularJS $http service makes a request to the server, and returns a response.
+The .get method is a shortcut method of the $http service. There are several shortcut methods:
+.delete()
+.get()
+.head()
+.jsonp()
+.patch()
+.post()
+.put()
+
+Ref 2:
+The $http service is how AngularJS makes rest API calls. It's capable of making the common 'GET', 'POST', 'PUT', and 'DELETE' API calls as well as the less common 'PATCH' and 'HEAD' calls. It can also make jsonp calls for cross-origin requests.
+
+Ref 3:
+
+Ref 4:
+Ref 5:
+6) what is ajax? what are some uses cases of using ajax?
+Ref 1:
+Ajax (also AJAX; /ˈeɪdʒæks/; short for "asynchronous JavaScript and XML")[1][2][3] is a set of Web development techniques using many Web technologies on the client side to create asynchronous Web applications. With Ajax, Web applications can send data to and retrieve from a server asynchronously (in the background) without interfering with the display and behavior of the existing page. By decoupling the data interchange layer from the presentation layer, Ajax allows for Web pages, and by extension Web applications, to change content dynamically without the need to reload the entire page.[4] In practice, modern implementations commonly substitute JSON for XML due to the advantages of being native to JavaScript.[5]
+
+Ajax is not a single technology, but rather a group of technologies. HTML and CSS can be used in combination to mark up and style information. The DOM is accessed with JavaScript to dynamically display – and allow the user to interact with – the information presented. JavaScript and the XMLHttpRequest object provide a method for exchanging data asynchronously between browser and server to avoid full page reloads.
+
+Contents  [hide]
+1	History
+2	Technologies
+3	Drawbacks
+4	Examples
+5	See also
+6	References
+7	External links
+
+Ref 2:
+In short, AJAX is all about updating parts of a webpage without having to reload the entire thing. That's pretty useful if your website is big and involved, you don't want your users having to load the same piece of information multiple times.
+
+Ref 3:
+Ajax is a client-side script that communicates to and from a server/database without the need for a postback or a complete page refresh. The best definition I’ve read for Ajax is “the method of exchanging data with a server, and updating parts of a web page – without reloading the entire page.” Ajax itself is mostly a generic term for various JavaScript techniques used to connect to a web server dynamically without necessarily loading multiple pages. In a more narrowly-defined sense, it refers to the use of XmlHttpRequest objects to interact with a web server dynamically via JavaScript.
+
+Ref 4:
+
+
+Ref 5:
